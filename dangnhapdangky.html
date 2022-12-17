@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: #787878;
+        }
+        @media screen and (max-width: 667px) {
+            
+        }
+        /*dang nhap - dang ky form*/
+        .dangnhap-dangky {
+            top: 100px;
+            left: 27%;
+            position: relative;
+            display: inline-flex;
+            height: 500px;
+            border-radius: 30px;
+            background-color: #dfedfa;
+            font-family: Roboto, Helvetica, Arial, sans-serif;
+            
+        }
+        .dangnhap-dangky .left{
+            background-color: #ffffff;
+            width: 500px;
+            padding: 40px 25px 24px;
+            border-radius: 30px 0px 0px 30px;
+        }
+        .dangnhap-dangky .left h4{
+            font-size: 24px;
+            margin: 0px 0px 10px;
+        }
+        .dangnhap-dangky .left p{
+            font-size: 15px;
+        }
+        .dangnhap-dangky .left form input{
+            width:490px;
+            padding: 10px 0px;
+            border: none;
+            border-bottom: 1px solid lightgray;
+        }
+        .dangnhap-dangky .left form button{
+            width: 490px;
+            color: #ffffff;
+            font-size: 20px;
+            background: #ff424e;
+            margin: 30px 0px 10px;
+            padding: 13px 0px;
+            border: none;
+            border-radius: 5px;
+        }
+        .dangnhap-dangky .left .leftbuttom{
+            text-align: center;
+        }
+        .dangnhap-dangky .left .leftbuttom img{
+            width: 60px;
+            height: 60px;
+            margin: 5px 10px;
+        }
+        .dangnhap-dangky .left .leftbuttom .loginemail{
+            text-decoration: none;
+            color: #0d5cb6;
+            font-size: 14px;
+            margin: 10px 0px 0px;
+        }
+        .dangnhap-dangky .left .leftbuttom .container{
+            position: absolute;
+            left: 125px;
+            top: 350px;
+        }
+        .dangnhap-dangky .left .leftbuttom .container .tieptucbang{
+            color: #787878;
+            font-size: 15px;
+        }
+        .dangnhap-dangky .left .leftbuttom .container p,a{
+            color: #787878;
+            font-size: 11px;
+        }
+        .dangnhap-dangky .right{
+            text-align: center;
+            color: #0B74e5;
+            width: 300px;
+        }
+        .dangnhap-dangky .right img{
+            width: 200px;
+            height: 200px;
+        }
+        .dangnhap-dangky .right .container{
+            position: absolute;
+            top: 110px;
+            left: 600px;
+        }
+        .dangnhap-dangky .right .exit{
+            position: absolute;
+            width: 42px;
+            height: 42px;
+            top: -20px;
+            right: -20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="dangnhap-dangky">
+        <div class="left">
+            <H4 class="xinchao">Xin chào</H4>
+            <p class="joinorcreateacc">Đăng nhập hoặc Tạo tài khoản</p>
+            <form action="" class="login">
+                <input type="text" class="phonenumber" placeholder="Số điện thoại"><br>
+                <button>Tiếp tục</button>
+            </form>
+            <div class="leftbuttom">
+                <a class="loginemail" href="#">Đăng nhập bằng email</a><br>
+
+            <div class="container">
+                <span class="tieptucbang">Hoặc tiếp tục bằng</span>
+                <div class="img">
+                    <a href="#" target="_self"><img src="./img/f.png" alt="#"></a>
+                    <a href="#" target="_self"><img src="./img/gg.png" alt="#"></a>
+                </div>
+                <p class="note">Bằng với việc tiếp tục, bạn đã chấp nhận <a href="#">điều khoản sử dụng</a></p>
+            </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="container">
+                <img src="./img/right-login.png" alt="#">
+                <div class="content">
+                    <h4>Mua sắm tại Tiki</h4>
+                    <span>Siêu ưu đãi mỗi ngày</span>
+                </div>
+            </div>
+            <a href="./index.html" target="_self"><img src="./img/x-login.png" alt="#" class="exit"></a>
+        </div>
+    </div>
+</body>
+</html>
+
+

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiki - Bài tập lớn kết thúc môn học</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="./js.js"></script>
+    <link rel="stylesheet" href="./css.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="gioiThieuSV">
+            <a href="./gtSV_DT.html"><span>Giới Thiệu về Sinh viên</span></a>
+        </div>
+
+        <div class="header">
+            <a href="./index.html" target="_self"><img id="img1" src="./img/1.png" alt="tiki"></a>
+            <a href="https://tiki.vn/astra-rewards" target="_self"><img id="img2" src="./img/2.png" alt="astrarewards"></a>
+            
+            <input id="input1" type="text" placeholder="Tìm sản phẩm, danh mục hay thương hiệu mong muốn ...">
+            <div class="search">
+                <a href="#" target="_self" onclick="Search()"><img id="img3" src="./img/3.png" alt="search"></a>
+                <form action="">
+                    <input id="button1" type="button" value="Tìm Kiếm" onclick="Search()">
+                </form>
+                
+            </div>
+            <div class="link1">
+                <a href="">trái cây</a>
+                <a href="">thịt, trứng</a>
+                <a href="">rau củ quả</a>
+                <a href="">sữa, bơ, phô mai</a>
+                <a href="">hải sản</a>
+                <a href="">gạo, mì ăn liền</a>
+                <a href="">đồ uống, bia rượu</a>
+                <a href="">bánh gạo</a>
+            </div>
+            
+            
+            <a href="./dangnhapdangky.html" target="_self"><img id="img4" src="./img/4.png" alt="#"></a>
+            <div class="login_account">
+                <a href="./dangnhapdangky.html"><span id="login">Đăng nhập / Đăng ký</span><br></a>
+                <a href="./dangnhapdangky.html"><span id="account">Tài khoản</span></a>
+                <a href="./dangnhapdangky.html" target="_self"><img id="img5" src="./img/5.png" alt="account"></a>
+            </div>
+            
+
+            <a href="#" target="_self" onclick="Cart()"><img id="img6" src="./img/6.png" alt="cart"></a>
+            <a href="#" target="_self"  onclick="Cart()"><span id="cart">Giỏ hàng</span></a>
+              
+        </div>
+
+        <div class="carts">
+            <div class="cart">
+                <div class="row">
+                    <div class="item">
+                        <div class="img"><img src="./img/sanpham/9.png" alt=""></div>
+                        <div class="product_name">
+                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad distinctio inventore reprehenderit harum! Praesentium eveniet, quae nisi quos sapiente velit id enim quam, voluptate libero ipsa itaque totam neque quia.</span>
+                        </div>
+                    </div>
+                    <div class="amount">
+                        <input type="number" name="amount" value="1" min="0" id="">
+                    </div>
+                    <div class="price">
+                        <span class="price_value">0</span><span><u>đ</u></span>
+                    </div>
+                    <div class="delete">
+                        <i  class="fa fa-trash-o" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="buys">
+                <div>
+                    <div class="tamtinh">
+                        <div>
+                            <span class="prices_text">Tạm tính</span>
+                        </div>
+                        <div class="prices_values">
+                            <span class="prices_value">0</span><span>đ</span>
+                        </div>
+                    </div>
+                    <hr style="width: 100%; opacity: 0.4;">
+    
+                    <div class="totals">
+                        <div class="total">
+                            <div class="prices_texts">
+                                <span class="prices_text">Tổng tiền</span>
+                            </div>
+                            <div class="prices_values">
+                                <span class="prices_value">0</span><span> <u>đ</u></span><br>
+                            </div>
+                        </div>
+                        <div class="total--note">
+                            <span class="prices_value--note">
+                                (Đã bao gồm thuế VAT nếu có)
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="buy">
+                    <button class="muahang">Mua Hàng</button>
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+
+    <script src="./js.js"></script>
+    
+</body>
+</html>

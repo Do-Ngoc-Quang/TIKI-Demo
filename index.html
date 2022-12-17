@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiki - Bài tập lớn kết thúc môn học</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="./js.js"></script>
+    <link rel="stylesheet" href="./css.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" type="image/png" href="./img/tiki-favicon.png">
+</head>
+<body>
+    <div class="container">
+        <div class="gioiThieuSV">
+            <a href="./gtSV_DT.html">Giới Thiệu về Sinh viên</a>
+        </div>
+
+        <div class="header">
+            <a href="#" target="_self"><img id="img1" src="./img/1.png" alt="tiki"></a>
+            <a href="#" target="_self"><img id="img2" src="./img/2.png" alt="astrarewards"></a>
+            
+            <input id="input1" type="text" placeholder="Tìm sản phẩm, danh mục hay thương hiệu mong muốn ...">
+            <div class="search">
+                <a href="#" target="_self" onclick="Search()"><img id="img3" src="./img/3.png" alt="search"></a>
+                <form action="">
+                    <input id="button1" type="button" value="Tìm Kiếm" onclick="Search()">
+                </form>
+            </div>
+            <div class="link1">
+                <a href="">trái cây</a>
+                <a href="">thịt, trứng</a>
+                <a href="">rau củ quả</a>
+                <a href="">sữa, bơ, phô mai</a>
+                <a href="">hải sản</a>
+                <a href="">gạo, mì ăn liền</a>
+                <a href="">đồ uống, bia rượu</a>
+                <a href="">bánh gạo</a>
+            </div>
+            
+            <a href="./dangnhapdangky.html" target="_self"><img id="img4" src="./img/4.png" alt="#"></a>
+            <div class="login_account">
+                <a href="./dangnhapdangky.html"><span id="login">Đăng nhập / Đăng ký</span><br></a>
+                <a href="./dangnhapdangky.html"><span id="account">Tài khoản</span></a>
+                <a href="./dangnhapdangky.html" target="_self"><img id="img5" src="./img/5.png" alt="account"></a>
+            </div>
+            
+            <button id="cart" class="cart" style="background-color: #1A94FF; margin: 0; padding: 0;">
+                <img id="img6" src="./img/6.png" alt="">
+                <span>Giỏ hàng</span>
+            </button>
+
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Giỏ Hàng</h5>
+                        <span class="close">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                        <div class="cart-row">
+                            <span class="cart-item cart-header cart-column">Sản Phẩm</span>
+                            <span class="cart-price cart-header cart-column">Giá</span>
+                            <span class="cart-quantity cart-header cart-column">Số Lượng</span>
+                        </div>
+                        <div class="cart-items">
+                            <!-- <div class="cart-row">
+                                <div class="cart-item cart-column">
+                                    <img class="cart-item-image" class="img-prd" src="" width="100" height="100">
+                                    <span class="cart-item-title"></span>
+                                </div>
+                                <span class="cart-price cart-column cart-price-color">0đ</span>
+                                <div class="cart-quantity cart-column">
+                                    <input class="cart-quantity-input" type="number" value="0">
+                                    <i  class="btn-danger fa fa-trash-o" aria-hidden="true"></i>
+                                </div>
+                            </div> -->
+                        </div>
+                        <div class="cart-total">
+                            <strong class="cart-total-title">Tổng Cộng:</strong>
+                            <span class="cart-total-price">0 đ</span>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary close-footer">Đóng</button>
+                        <button type="button" class="btn btn-primary order">Mua Hàng</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="Link-header">
+            <a href="">Thịt, Rau Củ</a>
+            <a href="">Bách Hóa</a>
+            <a href="">Nhà Cửa</a>
+            <a href="">Điện Tử</a>
+            <a href="">Thiết Bị Số</a>
+            <a href="">Điện thoại</a>
+            <a href="">Mẹ & Bé</a>
+            <a href="">Làm Đẹp</a>
+            <a href="">Gia Dụng</a>
+            <a href="">Thời Trang Nữ</a>
+            <a href="">Thời Trang Nam</a>
+            <a href="">Giày Nữ</a>
+            <a href="">Túi Nữ</a>
+        </div>
+
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+              <img src="./img/slide/sl1.png" style="width:100%">
+            </div>
+           
+            <div class="mySlides fade">
+              <img src="./img/slide/sl2.png" style="width:100%">
+            </div>
+           
+            <div class="mySlides fade">
+              <img src="./img/slide/sl3.png" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="./img/slide/sl4.png" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="./img/slide/sl5.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="./img/slide/sl6.png" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="./img/slide/sl7.png" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="./img/slide/sl8.png" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="./img/slide/sl9.png" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="./img/slide/sl10.png" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="./img/slide/sl11.png" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="./img/slide/sl12.png" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="./img/slide/sl13.png" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="./img/slide/sl14.png" style="width:100%">
+            </div>
+          </div>
+          <br>
+           
+          <div class="dot-all">
+            <span class="dot" onclick="currentSlide(0)"></span> 
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+            <span class="dot" onclick="currentSlide(4)"></span> 
+            <span class="dot" onclick="currentSlide(5)"></span> 
+            <span class="dot" onclick="currentSlide(6)"></span> 
+            <span class="dot" onclick="currentSlide(7)"></span> 
+            <span class="dot" onclick="currentSlide(8)"></span> 
+            <span class="dot" onclick="currentSlide(9)"></span> 
+            <span class="dot" onclick="currentSlide(10)"></span> 
+            <span class="dot" onclick="currentSlide(11)"></span> 
+            <span class="dot" onclick="currentSlide(12)"></span> 
+            <span class="dot" onclick="currentSlide(13)"></span>
+        </div>
+
+        <a href="#" target="_self"><img id="img7" src="./img/7.png" alt="#"></a>
+
+        <div class="img8910">
+            <a href="#" target="_self"><img id="img8" src="./img/8.png" alt="#"></a>
+            <a href="#" target="_self"><img id="img9" src="./img/9.png" alt="#"></a>
+            <a href="#" target="_self"><img id="img10" src="./img/10.png" alt="#"></a>
+        </div>
+        
+        <div class="menu-item">
+            <div class="item">
+                <a href="#" target="_self"><img id="img11" src="./img/11.png" alt="#"><br></a>
+                
+                <a class="item_text" href="#">Siêu hội Astra</a>
+            </div>
+            <div class="item">
+                <a href="#" target="_self"><img id="img12" src="./img/12.png" alt="#"><br></a>
+                
+                <a class="item_text" href="#">Mã giảm giá</a>
+            </div>
+            <div class="item">
+                <a href="#" target="_self"><img id="img13" src="./img/13.png" alt="#"><br></a>
+                
+                <a class="item_text" href="#">Heo vàng Astra 20%</a>
+            </div>
+            <div class="item">
+                <a href="#" target="_self"><img id="img14" src="./img/14.png" alt="#"><br></a>
+                
+                <a class="item_text" href="#">Đi chợ siêu tốc</a>
+            </div>
+            <div class="item">
+                <a href="#" target="_self"><img id="img15" src="./img/15.png" alt="#"><br></a>
+                
+                <a class="item_text" href="#">Thưởng thêm Astra</a>
+            </div>
+            <div class="item">
+                <a href="#" target="_self"><img id="img16" src="./img/16.png" alt="#"><br></a>
+                
+                <a class="item_text" href="#">Tiki Exchange</a>
+            </div>
+            <div class="item">
+                <a href="#" target="_self"><img id="img17" src="./img/17.png" alt="#"><br></a>
+                
+                <a class="item_text" href="#">Đóng tiền, nạp thẻ</a>
+            </div>
+            <div class="item">
+                <a href="#" target="_self"><img id="img18" src="./img/18.png" alt="#"><br></a>
+                
+                <a class="item_text" href="#">Bảo hiểm Tiki360</a>
+            </div>
+            <div class="item">
+                <a href="#" target="_self"><img id="img19" src="./img/19.png" alt="#"><br></a>
+                
+                <a class="item_text" href="#">Giảm đến 50%</a>
+            </div>
+            <div class="item">
+                <a href="#" target="_self"><img id="img20" src="./img/20.png" alt="#"><br></a>
+                
+                <a class="item_text" href="#">Hoàn tiền 15%</a>
+            </div>
+            <div class="item">
+                <a href="#" target="_self"><img id="img21" src="./img/21.png" alt="#"><br></a>
+                
+                <a class="item_text" href="#">Ưu đãi thanh toán</a>
+            </div>
+        </div>
+        
+        <div class="banner-khuyenmai">
+            <a href="#" target="_self"><img id="img22" src="./img/22.png" alt="#"></a>
+            
+            <a href="#" target="_self"><img id="img23" src="./img/23.png" alt="#"></a>
+            
+            <a href="#" target="_self"><img id="img24" src="./img/24.png" alt="#"></a>
+
+            <a href="#" target="_self"><img id="img25" src="./img/25.png" alt="#"></a>
+        </div>
+
+        <div class="danhmucnoibat">
+            <div class="item">
+                <a href="#" target="_self"><img id="noibat1" src="./img/noibat1.png" alt="#"><br></a>
+                
+                <a class="item_text" href="#">Ngon</a>
+            </div>
+            <div class="item">
+                <a href="#" target="_self"><img id="noibat2" src="./img/noibat2.jpg" alt="#"><br></a>
+                
+                <a class="item_text" href="#">Giày thể thao nam</a>
+            </div>
+            <div class="item">
+                <a href="#" target="_self"><img id="noibat3" src="./img/noibat3.jpg" alt="#"><br></a>
+                
+                <a class="item_text" href="#">Balo</a>
+            </div>
+            <div class="item">
+                <a href="#" target="_self"><img id="noibat4" src="./img/noibat4.jpg" alt="#"><br></a>
+                
+                <a class="item_text" href="#">Sách tư duy - Kỹ năng sống</a>
+            </div>
+            <div class="item">
+                <a href="#" target="_self"><img id="noibat5" src="./img/noibat5.jpg" alt="#"><br></a>
+                
+                <a class="item_text" href="#">Điện thoại Smartphone</a>
+            </div>
+            <div class="item">
+                <a href="#" target="_self"><img id="noibat6" src="./img/noibat6.jpg" alt="#"><br></a>
+                
+                <a class="item_text" href="#">Truyện tranh, Manga, Comic</a>
+            </div>
+            <div class="item">
+                <a href="#" target="_self"><img id="noibat7" src="./img/noibat7.jpg" alt="#"><br></a>
+                
+                <a class="item_text" href="#">Tiểu thuyết</a>
+            </div>
+            <div class="item">
+                <a href="#" target="_self"><img id="noibat8" src="./img/noibat8.jpg" alt="#"><br></a>
+                
+                <a class="item_text" href="#">Truyện ngắn - Tản văn</a>
+            </div>
+            <div class="item">
+                <a href="#" target="_self"><img id="noibat9" src="./img/noibat9.jpg" alt="#"><br></a>
+                
+                <a class="item_text" href="#">Tã quần</a>
+            </div>
+            <div class="item">
+                <a href="#" target="_self"><img id="noibat10" src="./img/noibat10.jpg" alt="#"><br></a>
+                
+                <a class="item_text" href="#">Bình giữ nhiệt</a>
+            </div>
+        </div>
+
+        <div class="danhmucnoibat2">
+            <div class="item">
+                <a href="#" target="_self"><img id="noibat2-1" src="./img/noibat2-1.png" alt="#"><br></a>
+                
+                <a class="item_text" href="#">Bia Nội Địa</a>
+            </div>
+            <div class="item">
+                <a href="#" target="_self"><img id="noibat2-2" src="./img/noibat2-2.jpg" alt="#"><br></a>
+                
+                <a class="item_text" href="#">Bàn ghế làm việc</a>
+            </div>
+            <div class="item">
+                <a href="#" target="_self"><img id="noibat2-3" src="./img/noibat2-3.jpg" alt="#"><br></a>
+                
+                <a class="item_text" href="#">Máy tính bảng</a>
+            </div>
+            <div class="item">
+                <a href="#" target="_self"><img id="noibat2-4" src="./img/noibat2-4.jpg" alt="#"><br></a>
+                
+                <a class="item_text" href="#">Loa Bluetooth</a>
+            </div>
+            <div class="item">
+                <a href="#" target="_self"><img id="noibat2-5" src="./img/noibat2-5.png" alt="#"><br></a>
+                
+                <a class="item_text" href="#">Kệ & Tử</a>
+            </div>
+            <div class="item">
+                <a href="#" target="_self"><img id="noibat2-6" src="./img/noibat2-6.jpg" alt="#"><br></a>
+                
+                <a class="item_text" href="#">Xe tay ga</a>
+            </div>
+            <div class="item">
+                <a href="#" target="_self"><img id="noibat2-7" src="./img/noibat2-7.jpg" alt="#"><br></a>
+                
+                <a class="item_text" href="#">Tủ</a>
+            </div>
+            <div class="item">
+                <a href="#" target="_self"><img id="noibat2-8" src="./img/noibat2-8.jpg" alt="#"><br></a>
+                
+                <a class="item_text" href="#">Tác phẩm kinh điển</a>
+            </div>
+            <div class="item">
+                <a href="#" target="_self"><img id="noibat2-9" src="./img/noibat2-9.jpg" alt="#"><br></a>
+                
+                <a class="item_text" href="#">Kem và sữa dưỡng da</a>
+            </div>
+            <div class="item">
+                <a href="#" target="_self"><img id="noibat2-10" src="./img/noibat2-10.jpg" alt="#"><br></a>
+                
+                <a class="item_text" href="#">Tai nghe True Wireless</a>
+            </div>
+        </div>
+
+        <div class="banner-khuyenmai2">
+            <a href="#" target="_self"><img id="khuyenmai2-1" src="./img/khuyenmai2-1.png" alt="#"></a>
+            
+            <a href="#" target="_self"><img id="khuyenmai2-2" src="./img/khuyenmai2-2.png" alt="#"></a>
+            
+            <a href="#" target="_self"><img id="khuyenmai2-3" src="./img/khuyenmai2-3.png" alt="#"></a>
+        </div>
+
+        <div class="container-goiy">
+            <div class="goiyhomnay" id="danhchoban" >
+                <span>Gợi Ý Hôm Nay</span>
+            </div>
+    
+            <div class="menugoiy">
+                <div class="item">
+                    <a href="#danhchoban" target="_self"><img src="./img/goiy1.png" alt="#"><br></a>
+                    <a href="#danhchoban">Dành cho bạn</a>
+                </div>
+                <div class="item">
+                    <a href="#" target="_self"><img src="./img/goiy2.png" alt="#"><br></a>
+                    <a class="item_text" href="#">Mua 1 Được 3</a>
+                </div>
+                <div class="item">
+                    <a href="#" target="_self"><img src="./img/goiy3.png" alt="#"><br></a>
+                    <a class="item_text" href="#">Coupon 45K</a>
+                </div>
+                <div class="item">
+                    <a href="#" target="_self"><img src="./img/goiy4.png" alt="#"><br></a>
+                    <a class="item_text" href="#">Đi Chợ Siêu Sale</a>
+                </div>
+                <div class="item">
+                    <a href="#" target="_self"><img src="./img/goiy5.png" alt="#"><br></a>
+                    <a class="item_text" href="#">Dịch vụ số</a>
+                </div>
+                <div class="item">
+                    <a href="#" target="_self"><img src="./img/goiy6.png" alt="#"><br></a>
+                    <a class="item_text" href="#">Deal Siêu Hot</a>
+                </div>
+                <div class="item">
+                    <a href="#" target="_self"><img src="./img/goiy7.png" alt="#"><br></a>
+                    <a class="item_text" href="#">Rẻ Vô Đối</a>
+                </div>
+                <div class="item">
+                    <a href="#" target="_self"><img src="./img/goiy8.png" alt="#"><br></a>
+                    <a class="item_text" href="#">Hàng Mới</a>
+                </div>
+            </div>
+
+            <div class="sanpham" id="danhchoban">
+                <ul>
+                    <li>
+                        <div class="item">
+                            <div class="img">
+                                <a href="#" target="_self"><img class="img-prd" src="./img/sanpham/1.png" alt="#"><br></a>
+                            </div>
+                            <div class="info">
+                                <a href=""><span class="price">170000 <sup><u>đ</u></sup></span></a>
+                                <span class="persent">-10%</span>
+                                <span class="numberdanhgia">4.5</span>
+                                <img class="saodanhgia" src="./img/sao.png" alt="sao">
+                                <a href=""><h3  class="content-product-h3" >Đèn Led Ping Pong Chuôi Đen Bóng 5cm, Dài 5m 20 Bóng Đèn Chống Nước Trang Trí Ngoài Trời - Chính Hãng NAVIVU</h3></a>
+                                <button type="button" class="btn-cart" style="margin-left: 66px;">Chọn Mua</button>
+                                
+                                
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <div class="img">
+                                <a href="#" target="_self"><img class="img-prd" src="./img/sanpham/2.png" alt="#"><br></a>
+                            </div>
+                            <div class="info">
+                                <a href=""><span class="price">139000 <sup><u>đ</u></sup></span></a>
+                                <span class="persent">-13%</span>
+                                <span class="numberdanhgia">4.5</span>
+                                <img class="saodanhgia" src="./img/sao.png" alt="sao">
+                                <a href=""><h3  class="content-product-h3" >Thay Kính Đổi Cách Nhìn</h3></a>
+                                <button class="btn-cart" style="margin-left: 66px;">Chọn Mua</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <div class="img">
+                                <a href="#" target="_self"><img class="img-prd" src="./img/sanpham/3.png" alt="#"><br></a>
+                            </div>
+                            <div class="info">
+                                <a href=""><span class="price">95000 <sup><u>đ</u></sup></span></a>
+                                <span class="persent">-8%</span>
+                                <span class="numberdanhgia">4.5</span>
+                                <img class="saodanhgia" src="./img/sao.png" alt="sao">
+                                <a href=""><h3  class="content-product-h3" >[Tặng 1 bình nước] Combo 2 hộp cà phê hòa tan Nescafé 3in1 cà phê sữa đá (Hộp 10 gói x 24g)</h3></a>
+                                <button class="btn-cart" style="margin-left: 66px;">Chọn Mua</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <div class="img">
+                                <a href="#" target="_self"><img class="img-prd" src="./img/sanpham/4.png" alt="#"><br></a>
+                            </div>
+                            <div class="info">
+                                <a href=""><span class="price">86400 <sup><u>đ</u></sup></span></a>
+                                <span class="persent">-21%</span>
+                                <span class="numberdanhgia">4.5</span>
+                                <img class="saodanhgia" src="./img/sao.png" alt="sao">
+                                <a href=""><h3  class="content-product-h3" >Đồ chơi: Ghép Hình Khí Tài Quân Sự - Trực Thăng Chiến Đấu 120 Chi Tiết DK81057</h3></a>
+                                <button class="btn-cart" style="margin-left: 66px;">Chọn Mua</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <div class="img">
+                                <a href="#" target="_self"><img class="img-prd" src="./img/sanpham/5.png" alt="#"><br></a>
+                            </div>
+                            <div class="info">
+                                <a href=""><span class="price">305000 <sup><u>đ</u></sup></span></a>
+                                <span class="persent">-17%</span>
+                                <span class="numberdanhgia">4.5</span>
+                                <img class="saodanhgia" src="./img/sao.png" alt="sao">
+                                <a href=""><h3  class="content-product-h3" >Hộp Đựng Thuốc Gia Đình 3 Tầng Hộp Y Tế Phân Loại Thuốc TOMHOUSE Cỡ Lớn Siêu Tiện Dụng</h3></a>
+                                <button class="btn-cart" style="margin-left: 66px;">Chọn Mua</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <div class="img">
+                                <a href="#" target="_self"><img class="img-prd" src="./img/sanpham/6.png" alt="#"><br></a>
+                            </div>
+                            <div class="info">
+                                <a href=""><span class="price">181000 <sup><u>đ</u></sup></span></a>
+                                <span class="persent">-19%</span>
+                                <span class="numberdanhgia">4.5</span>
+                                <img class="saodanhgia" src="./img/sao.png" alt="sao">
+                                <a href=""><h3  class="content-product-h3" >Trung Nguyên Legend Success 3 - Lon 340gr</h3></a>
+                                <button class="btn-cart" style="margin-left: 66px;">Chọn Mua</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <div class="img">
+                                <a href="#" target="_self"><img class="img-prd" src="./img/sanpham/7.png" alt="#"><br></a>
+                            </div>
+                            <div class="info">
+                                <a href=""><span class="price">269000 <sup><u>đ</u></sup></span></a>
+                                <span class="persent">-31%</span>
+                                <span class="numberdanhgia">4.5</span>
+                                <img class="saodanhgia" src="./img/sao.png" alt="sao">
+                                <a href=""><h3  class="content-product-h3" >Bộ lau nhà TIKILabel Innovative Mop Set</h3></a>
+                                <button class="btn-cart" style="margin-left: 66px;">Chọn Mua</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <div class="img">
+                                <a href="#" target="_self"><img class="img-prd" src="./img/sanpham/8.png" alt="#"><br></a>
+                            </div>
+                            <div class="info">
+                                <a href=""><span class="price">64800 <sup><u>đ</u></sup></span></a>
+                                <span class="persent">-25%</span>
+                                <span class="numberdanhgia">4.5</span>
+                                <img class="saodanhgia" src="./img/sao.png" alt="sao">
+                                <a href=""><h3  class="content-product-h3" >Cây Cam Ngọt Của Tôi</h3></a>
+                                <button class="btn-cart" style="margin-left: 66px;">Chọn Mua</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <div class="img">
+                                <a href="#" target="_self"><img class="img-prd" src="./img/sanpham/9.png" alt="#"><br></a>
+                            </div>
+                            <div class="info">
+                                <a href=""><span class="price">30750000 <sup><u>đ</u></sup></span></a>
+                                <span class="persent">-5%</span>
+                                <span class="numberdanhgia">4.5</span>
+                                <img class="saodanhgia" src="./img/sao.png" alt="sao">
+                                <a href=""><h3  class="content-product-h3" >Apple iPhone 14 Pro</h3></a>
+                                <button class="btn-cart" style="margin-left: 66px;">Chọn Mua</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <div class="img">
+                                <a href="#" target="_self"><img class="img-prd" src="./img/sanpham/10.png" alt="#"><br></a>
+                            </div>
+                            <div class="info">
+                                <a href=""><span class="price">132000 <sup><u>đ</u></sup></span></a>
+                                <span class="persent">-19%</span>
+                                <span class="numberdanhgia">4.5</span>
+                                <img class="saodanhgia" src="./img/sao.png" alt="sao">
+                                <a href=""><h3  class="content-product-h3" >Tiếng Núi</h3></a>
+                                <button class="btn-cart" style="margin-left: 66px;">Chọn Mua</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <div class="img">
+                                <a href="#" target="_self"><img class="img-prd" src="./img/sanpham/11.png" alt="#"><br></a>
+                            </div>
+                            <div class="info">
+                                <a href=""><span class="price">10850000 <sup><u>đ</u></sup></span></a>
+                                <span class="persent">-9%</span>
+                                <span class="numberdanhgia">4.5</span>
+                                <img class="saodanhgia" src="./img/sao.png" alt="sao">
+                                <a href=""><h3  class="content-product-h3" >Apple iPhone 11</h3></a>
+                                <button class="btn-cart" style="margin-left: 66px;">Chọn Mua</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <div class="img">
+                                <a href="#" target="_self"><img class="img-prd" src="./img/sanpham/12.png" alt="#"><br></a>
+                            </div>
+                            <div class="info">
+                                <a href=""><span class="price">18750000 <sup><u>đ</u></sup></span></a>
+                                <span class="persent">-7%</span>
+                                <span class="numberdanhgia">4.5</span>
+                                <img class="saodanhgia" src="./img/sao.png" alt="sao">
+                                <a href=""><h3  class="content-product-h3" >Apple iPhone 13</h3></a>
+                                <button class="btn-cart" style="margin-left: 66px;">Chọn Mua</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <div class="img">
+                                <a href="#" target="_self"><img class="img-prd" src="./img/sanpham/13.png" alt="#"><br></a>
+                            </div>
+                            <div class="info">
+                                <a href=""><span class="price">86400 <sup><u>đ</u></sup></span></a>
+                                <span class="persent">-41%</span>
+                                <span class="numberdanhgia">4.5</span>
+                                <img class="saodanhgia" src="./img/sao.png" alt="sao">
+                                <a href=""><h3  class="content-product-h3" >Đồ chơi: Ghép Hình Khí Tài Quân Sự - Xe Trinh Sát 107 Chi Tiết DK81060</h3></a>
+                                <button class="btn-cart" style="margin-left: 66px;">Chọn Mua</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <div class="img">
+                                <a href="#" target="_self"><img class="img-prd" src="./img/sanpham/14.png" alt="#"><br></a>
+                            </div>
+                            <div class="info">
+                                <a href=""><span class="price">7650000 <sup><u>đ</u></sup></span></a>
+                                <span class="persent">-11%</span>
+                                <span class="numberdanhgia">4.5</span>
+                                <img class="saodanhgia" src="./img/sao.png" alt="sao">
+                                <a href=""><h3  class="content-product-h3" >Ấm chén họa tiết châu Âu sang trọng phong cách tân cổ điên ACCA6-2</h3></a>
+                                <button class="btn-cart" style="margin-left: 66px;">Chọn Mua</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <div class="img">
+                                <a href="#" target="_self"><img class="img-prd" src="./img/sanpham/15.png" alt="#"><br></a>
+                            </div>
+                            <div class="info">
+                                <a href=""><span class="price">1200000 <sup><u>đ</u></sup></span></a>
+                                <span class="persent">-12%</span>
+                                <span class="numberdanhgia">4.5</span>
+                                <img class="saodanhgia" src="./img/sao.png" alt="sao">
+                                <a href=""><h3  class="content-product-h3" >Mẫu hôp đựng bút phale cao cấp hàng nhập khẩu dùng để trang trí bàn làm việc phong cách tân cổ điển</h3></a>
+                                <button class="btn-cart" style="margin-left: 66px;">Chọn Mua</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <div class="img">
+                                <a href="#" target="_self"><img class="img-prd" src="./img/sanpham/16.png" alt="#"><br></a>
+                            </div>
+                            <div class="info">
+                                <a href=""><span class="price">540000 <sup><u>đ</u></sup></span></a>
+                                <span class="persent">-14%</span>
+                                <span class="numberdanhgia">4.5</span>
+                                <img class="saodanhgia" src="./img/sao.png" alt="sao">
+                                <a href=""><h3  class="content-product-h3" >Đèn Cây Đứng Đọc Sách Chống Cận; Bóng Đèn Led, Công Tắc Cảm Ứng; Thân Xoay Gập Linh Hoạt; Chiều Cao 175cm - Hàng Nhập Khẩu</h3></a>
+                                <button class="btn-cart" style="margin-left: 66px;">Chọn Mua</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <div class="img">
+                                <a href="#" target="_self"><img class="img-prd" src="./img/sanpham/17.png" alt="#"><br></a>
+                            </div>
+                            <div class="info">
+                                <a href=""><span class="price">2490000 <sup><u>đ</u></sup></span></a>
+                                <span class="persent">-24%</span>
+                                <span class="numberdanhgia">4.5</span>
+                                <img class="saodanhgia" src="./img/sao.png" alt="sao">
+                                <a href=""><h3  class="content-product-h3" >Bàn Làm Việc Với Thiết Kế Chân Bàn Chữ X Hiện Đại Thương Hiệu SIB Decor</h3></a>
+                                <button class="btn-cart" style="margin-left: 66px;">Chọn Mua</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <div class="img">
+                                <a href="#" target="_self"><img class="img-prd" src="./img/sanpham/18.png" alt="#"><br></a>
+                            </div>
+                            <div class="info">
+                                <a href=""><span class="price">1099000 <sup><u>đ</u></sup></span></a>
+                                <span class="persent">-28%</span>
+                                <span class="numberdanhgia">4.5</span>
+                                <img class="saodanhgia" src="./img/sao.png" alt="sao">
+                                <a href=""><h3  class="content-product-h3" >Bàn Xếp Gấp Gọn Thông Minh PHB609 Bàn Làm Việc Và Học Tập 4 Cấp Độ Đa Năng Pehouse</h3></a>
+                                <button class="btn-cart" style="margin-left: 66px;">Chọn Mua</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <div class="img">
+                                <a href="#" target="_self"><img class="img-prd" src="./img/sanpham/19.png" alt="#"><br></a>
+                            </div>
+                            <div class="info">
+                                <a href=""><span class="price">101400 <sup><u>đ</u></sup></span></a>
+                                <span class="persent">-18%</span>
+                                <span class="numberdanhgia">4.5</span>
+                                <img class="saodanhgia" src="./img/sao.png" alt="sao">
+                                <a href=""><h3  class="content-product-h3" >Trăm Năm Cô Đơn</h3></a>
+                                <button class="btn-cart" style="margin-left: 66px;">Chọn Mua</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <div class="img">
+                                <a href="#" target="_self"><img class="img-prd" src="./img/sanpham/20.png" alt="#"><br></a>
+                            </div>
+                            <div class="info">
+                                <a href=""><span class="price">90000 <sup><u>đ</u></sup></span></a>
+                                <span class="persent">-35%</span>
+                                <span class="numberdanhgia">4.5</span>
+                                <img class="saodanhgia" src="./img/sao.png" alt="sao">
+                                <a href=""><h3  class="content-product-h3" >Thư Viện Nửa Đêm</h3></a>
+                                <button class="btn-cart" style="margin-left: 66px;">Chọn Mua</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <div class="img">
+                                <a href="#" target="_self"><img class="img-prd" src="./img/sanpham/21.png" alt="#"><br></a>
+                            </div>
+                            <div class="info">
+                                <a href=""><span class="price">7690000 <sup><u>đ</u></sup></span></a>
+                                <span class="persent">-12%</span>
+                                <span class="numberdanhgia">4.5</span>
+                                <img class="saodanhgia" src="./img/sao.png" alt="sao">
+                                <a href=""><h3  class="content-product-h3" >Apple iPad 10.2-inch (9th Gen) Wi-Fi, 2021</h3></a>
+                                <button class="btn-cart" style="margin-left: 66px;">Chọn Mua</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <div class="img">
+                                <a href="#" target="_self"><img class="img-prd" src="./img/sanpham/22.png" alt="#"><br></a>
+                            </div>
+                            <div class="info">
+                                <a href=""><span class="price">126000 <sup><u>đ</u></sup></span></a>
+                                <span class="persent">-29%</span>
+                                <span class="numberdanhgia">4.5</span>
+                                <img class="saodanhgia" src="./img/sao.png" alt="sao">
+                                <a href=""><h3  class="content-product-h3" >Những Tù Nhân Của Địa Lý</h3></a>
+                                <button class="btn-cart" style="margin-left: 66px;">Chọn Mua</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <div class="img">
+                                <a href="#" target="_self"><img class="img-prd" src="./img/sanpham/23.png" alt="#"><br></a>
+                            </div>
+                            <div class="info">
+                                <a href=""><span class="price">399000 <sup><u>đ</u></sup></span></a>
+                                <span class="persent">-23%</span>
+                                <span class="numberdanhgia">4.5</span>
+                                <img class="saodanhgia" src="./img/sao.png" alt="sao">
+                                <a href=""><h3  class="content-product-h3" >[Bản Tết 2023] Thùng 24 Lon Bia Budweiser Tết (330ml/ lon)</h3></a>
+                                <button class="btn-cart" style="margin-left: 66px;">Chọn Mua</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <div class="img">
+                                <a href="#" target="_self"><img class="img-prd" src="./img/sanpham/24.png" alt="#"><br></a>
+                            </div>
+                            <div class="info">
+                                <a href=""><span class="price">15990000 <sup><u>đ</u></sup></span></a>
+                                <span class="persent">-6%</span>
+                                <span class="numberdanhgia">4.5</span>
+                                <img class="saodanhgia" src="./img/sao.png" alt="sao">
+                                <a href=""><h3  class="content-product-h3" >Apple iPhone 12</h3></a>
+                                <button class="btn-cart" style="margin-left: 66px;">Chọn Mua</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <div class="img">
+                                <a href="#" target="_self"><img class="img-prd" src="./img/sanpham/25.png" alt="#"><br></a>
+                            </div>
+                            <div class="info">
+                                <a href=""><span class="price">136000 <sup><u>đ</u></sup></span></a>
+                                <span class="persent">-45%</span>
+                                <span class="numberdanhgia">4.5</span>
+                                <img class="saodanhgia" src="./img/sao.png" alt="sao">
+                                <a href=""><h3  class="content-product-h3" >Đồ chơi ghép hình Duka – Những cô gái hiện đại</h3></a>
+                                <button class="btn-cart" style="margin-left: 66px;">Chọn Mua</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <div class="img">
+                                <a href="#" target="_self"><img class="img-prd" src="./img/sanpham/26.png" alt="#"><br></a>
+                            </div>
+                            <div class="info">
+                                <a href=""><span class="price">239000 <sup><u>đ</u></sup></span></a>
+                                <span class="persent">-37%</span>
+                                <span class="numberdanhgia">4.5</span>
+                                <img class="saodanhgia" src="./img/sao.png" alt="sao">
+                                <a href=""><h3  class="content-product-h3" >Đồ Chơi Xếp Hình Thế Giới Động Vật 102 Chi Tiết</h3></a>
+                                <button class="btn-cart" style="margin-left: 66px;">Chọn Mua</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <div class="img">
+                                <a href="#" target="_self"><img class="img-prd" src="./img/sanpham/27.png" alt="#"><br></a>
+                            </div>
+                            <div class="info">
+                                <a href=""><span class="price">1433000 <sup><u>đ</u></sup></span></a>
+                                <span class="persent">-14%</span>
+                                <span class="numberdanhgia">4.5</span>
+                                <img class="saodanhgia" src="./img/sao.png" alt="sao">
+                                <a href=""><h3  class="content-product-h3" >Đồng hồ Định vị Thông minh Gọi Video Call 4G GPS, Wifi, Pin Trâu Chống nước IP67 Model AMA Watch K9 Hàng nhập khẩu</h3></a>
+                                <button class="btn-cart" style="margin-left: 66px;">Chọn Mua</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <div class="img">
+                                <a href="#" target="_self"><img class="img-prd" src="./img/sanpham/28.png" alt="#"><br></a>
+                            </div>
+                            <div class="info">
+                                <a href=""><span class="price">136000 <sup><u>đ</u></sup></span></a>
+                                <span class="persent">-31%</span>
+                                <span class="numberdanhgia">4.5</span>
+                                <img class="saodanhgia" src="./img/sao.png" alt="sao">
+                                <a href=""><h3  class="content-product-h3" >Ghép hình cơ bản khối lớn - 52 chi tiết</h3></a>
+                                <button class="btn-cart" style="margin-left: 66px;">Chọn Mua</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <div class="img">
+                                <a href="#" target="_self"><img class="img-prd" src="./img/sanpham/29.png" alt="#"><br></a>
+                            </div>
+                            <div class="info">
+                                <a href=""><span class="price">50000 <sup><u>đ</u></sup></span></a>
+                                <span class="persent">-46%</span>
+                                <span class="numberdanhgia">4.5</span>
+                                <img class="saodanhgia" src="./img/sao.png" alt="sao">
+                                <a href=""><h3  class="content-product-h3" >Dây Đèn LED Kẹp Ảnh Trang Trí Lễ Tết, Sinh Nhật, Nhà Cửa - Nhiều Kích Cỡ</h3></a>
+                                <button class="btn-cart" style="margin-left: 66px;">Chọn Mua</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <div class="img">
+                                <a href="#" target="_self"><img class="img-prd" src="./img/sanpham/30.png" alt="#"><br></a>
+                            </div>
+                            <div class="info">
+                                <a href=""><span class="price">280000 <sup><u>đ</u></sup></span></a>
+                                <span class="persent">-36%</span>
+                                <span class="numberdanhgia">4.5</span>
+                                <img class="saodanhgia" src="./img/sao.png" alt="sao">
+                                <a href=""><h3  class="content-product-h3" >Ly Giữ Nhiệt Nắp Trượt Chống Tràn Rinfere - Tặng Kèm Ống Hút Không Gỉ, Dụng Cụ Vệ Sinh Ông Hút (900ml)</h3></a>
+                                <button class="btn-cart" style="margin-left: 66px;">Chọn Mua</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <div class="img">
+                                <a href="#" target="_self"><img class="img-prd" src="./img/sanpham/31.png" alt="#"><br></a>
+                            </div>
+                            <div class="info">
+                                <a href=""><span class="price">22490000 <sup><u>đ</u></sup></span></a>
+                                <span class="persent">-4%</span>
+                                <span class="numberdanhgia">4.5</span>
+                                <img class="saodanhgia" src="./img/sao.png" alt="sao">
+                                <a href=""><h3  class="content-product-h3" >Apple iPhone 14</h3></a>
+                                <button class="btn-cart" style="margin-left: 66px;">Chọn Mua</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <div class="img">
+                                <a href="#" target="_self"><img class="img-prd" src="./img/sanpham/32.png" alt="#"><br></a>
+                            </div>
+                            <div class="info">
+                                <a href=""><span class="price">295000 <sup><u>đ</u></sup></span></a>
+                                <span class="persent">-18%</span>
+                                <span class="numberdanhgia">4.5</span>
+                                <img class="saodanhgia" src="./img/sao.png" alt="sao">
+                                <a href=""><h3  class="content-product-h3" >Màn chiếu tương phản cao hỗ trợ máy chiếu BeeCube</h3></a>
+                                <button class="btn-cart" style="margin-left: 66px;">Chọn Mua</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <div class="img">
+                                <a href="#" target="_self"><img class="img-prd" src="./img/sanpham/33.png" alt="#"><br></a>
+                            </div>
+                            <div class="info">
+                                <a href=""><span class="price">59900 <sup><u>đ</u></sup></span></a>
+                                <span class="persent">-39%</span>
+                                <span class="numberdanhgia">4.5</span>
+                                <img class="saodanhgia" src="./img/sao.png" alt="sao">
+                                <a href=""><h3  class="content-product-h3" >Hành Tinh Của Một Kẻ Nghĩ Nhiều</h3></a>
+                                <button class="btn-cart" style="margin-left: 66px;">Chọn Mua</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <div class="img">
+                                <a href="#" target="_self"><img class="img-prd" src="./img/sanpham/34.png" alt="#"><br></a>
+                            </div>
+                            <div class="info">
+                                <a href=""><span class="price">180000 <sup><u>đ</u></sup></span></a>
+                                <span class="persent">-26%</span>
+                                <span class="numberdanhgia">4.5</span>
+                                <img class="saodanhgia" src="./img/sao.png" alt="sao">
+                                <a href=""><h3  class="content-product-h3" >How Psychology Works - Hiểu Hết Về Tâm Lý Học</h3></a>
+                                <button class="btn-cart" style="margin-left: 66px;">Chọn Mua</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <div class="img">
+                                <a href="#" target="_self"><img class="img-prd" src="./img/sanpham/35.png" alt="#"><br></a>
+                            </div>
+                            <div class="info">
+                                <a href=""><span class="price">47400 <sup><u>đ</u></sup></span></a>
+                                <span class="persent">-43%</span>
+                                <span class="numberdanhgia">4.5</span>
+                                <img class="saodanhgia" src="./img/sao.png" alt="sao">
+                                <a href=""><h3  class="content-product-h3" >Nhà Giả Kim (Tái Bản 2020)</h3></a>
+                                <button class="btn-cart" style="margin-left: 66px;">Chọn Mua</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <div class="img">
+                                <a href="#" target="_self"><img class="img-prd" src="./img/sanpham/36.png" alt="#"><br></a>
+                            </div>
+                            <div class="info">
+                                <a href=""><span class="price">106000 <sup><u>đ</u></sup></span></a>
+                                <span class="persent">-56%</span>
+                                <span class="numberdanhgia">4.5</span>
+                                <img class="saodanhgia" src="./img/sao.png" alt="sao">
+                                <a href=""><h3  class="content-product-h3" >Thao Túng Tâm Lý</h3></a>
+                                <button class="btn-cart" style="margin-left: 66px;">Chọn Mua</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="sanpham_xemthem">
+            <a class="item_text" href="#">Xem Thêm</a>
+        </div>
+        
+        <div class="footer">
+            <div class="footer-1">
+                <div class="footer-1-1">
+                    <h4>Hỗ trợ khách hàng</h4>
+                    <p>Hotline: <a class="item_text" href="#">1900-6035</a></p>
+                    <p>(1000 đ/phút, 8-21h kể cả T7, CN)</p>
+                    <a class="item_text" href="#">Câu hỏi thường gặp</a><br>
+                    <a class="item_text" href="#">Gửi yêu cầu hỗ trợ</a><br>
+                    <a class="item_text" href="#">Hướng dẫn đặt hàng</a><br>
+                    <a class="item_text" href="#">Phương thức vận chuyển</a><br>
+                    <a class="item_text" href="#">Chích sách đổi trả</a><br>
+                    <a class="item_text" href="#">Hướng dẫn trả góp</a><br>
+                    <a class="item_text" href="#">Chính sách hàng nhập khẩu</a>
+                    <p>Hỗ trợ khách hàng: <a class="item_text" href="#">hotro@tiki.vn</a></p>
+                    <p>Báo lỗi bảo mật: <a class="item_text" href="#">security@tiki.vn</a></p>
+                </div>
+                <div class="footer-1-2">
+                    <h4>Về Tiki</h4>
+                    <a class="item_text" href="#">Giới thiệu Tiki</a><br>
+                    <a class="item_text" href="#">Tuyển dụng</a><br>
+                    <a class="item_text" href="#">Chính sách bảo mật thanh toán</a><br>
+                    <a class="item_text" href="#">Chính sách bảo mật thông tin cá nhân</a><br>
+                    <a class="item_text" href="#">Chính sách giải quyết khiếu nại</a><br>
+                    <a class="item_text" href="#">Điều khoản sử dụng</a><br>
+                    <a class="item_text" href="#">Giới thiệu Tiki xu</a><br>
+                    <a class="item_text" href="#">Gói thành viên đặc quyền - Astra Rewards</a><br>
+                    <a class="item_text" href="#">Tiếp thị liên kết cùng Tiki</a><br>
+                    <a class="item_text" href="#">Bán hàng cùng doanh nghiệp</a><br>
+                    <a class="item_text" href="#">Điều kiện vận chuyển</a>
+                </div>
+                <div class="footer-1-3">
+                    <div class="footer-1-3-1">
+                        <h4>Hợp tác và liên kết</h4>
+                        <a class="item_text" href="#">Quy chế hoạt động Sàn GDTMĐT</a><br>
+                        <a class="item_text" href="#">Bán hàng cùng Tiki</a><br>
+                    </div>
+                    <div class="footer-1-3-2">
+                        <h4>Chứng nhận bởi</h4>
+                        <div class="flex">
+                            <img class="img1" src="./img/footer/chungnhan.png" alt="chungnhan">
+                            <img class="img2" src="./img/footer/bo-cong-thuong.svg" alt="chungnhan">
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-1-4">
+                    <div class="footer-1-4-1">
+                        <h4>Phương thức thanh toán</h4>
+                        <img src="./img/footer/pttt1.png" alt="pay">
+                        <img src="./img/footer/pttt2.png" alt="pay">
+                        <img src="./img/footer/pttt3.png" alt="pay">
+                        <img src="./img/footer/pttt4.png" alt="pay">
+                        <img src="./img/footer/pttt5.png" alt="pay">
+                        <img src="./img/footer/pttt7.png" alt="pay">
+                    </div>
+                    <div class="footer-1-4-2">
+                        <h4>Dịch vụ giao hàng</h4>
+                        <a class="item_text" href="#"><img src="./img/footer/divugiaohang.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="footer-1-5">
+                    <div class="footer-1-5-1">
+                        <h4>Kết nối với chúng tôi</h4>
+                        <a class="item_text" href="#"><img src="./img/footer/connect1.png" alt="connect"></a>
+                        <a class="item_text" href="#"><img src="./img/footer/connect2.png" alt="connect"></a>
+                        <a class="item_text" href="#"><img src="./img/footer/connect3.png" alt="connect"></a>
+                    </div>
+                    <div class="footer-1-5-2">
+                        <h4>Tải ứng dụng trên điện thoại</h4>
+                        <div class="qr_app">
+                            <div class="qr">
+                                <img src="./img/footer/qr.png" alt="qr">
+                            </div>
+                            <div class="display">
+                                <a class="item_text" href="#"><img src="./img/footer/appstore.png" alt=""></a><br>
+                                <a class="item_text" href="#"><img src="./img/footer/playstore.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-2">
+                <p>Trụ sở chính: Tòa nhà Viettel, Số 285, đường Cách Mạng Tháng 8, phường 12, quận 10, Thành phố Hồ Chí Minh</p>
+                <p>Tiki nhận đặt hàng trực tuyến và giao hàng tận nơi, chưa hỗ trợ mua và nhận hàng trực tiếp tại văn phòng hoặc trung tâm xử lý đơn hàng</p>
+                <p>Giấy chứng nhận Đăng ký Kinh doanh số 0309532909 do Sở Kế hoạch và Đầu tư Thành phố Hồ Chí Minh cấp lần đầu ngày 06/01/2010 và sửa đổi lần thứ 23 ngày 14/02/2022</p>
+                <p>© 2022 - Bản quyền của Công ty TNHH Ti Ki</p>
+            </div>
+            <hr style="width: 98%; opacity: 0.4;">
+
+            <div class="footer-3">
+                <h3>Tiki - Thật nhanh, thật chất lượng, thật rẻ</h4>
+                <div class="footer-3-1">
+                    <h4>Tiki có tất cả</h4>
+                    <p>Với hàng triệu sản phẩm từ các thương hiệu, cửa hàng uy tín, hàng nghìn loại mặt hàng từ <a class="item_text" href="#">Điện thoại smartphone</a> tới <a class="item_text" href="#">Rau củ quả tươi,</a> kèm theo dịch vụ giao hàng siêu tốc TikiNOW, Tiki mang đến cho bạn một trải nghiệm mua sắm online bắt đầu bằng chữ tín. Thêm vào đó, ở Tiki bạn có thể dễ dàng sử dụng vô vàn các tiện ích khác như <a class="item_text" href="#">mua thẻ cào, thanh toán hoá đơn điện nước, các dịch vụ bảo hiểm.</a></p>
+                </div>
+                <div class="footer-3-2">
+                    <h4>Khuyến mãi, ưu đãi tràn ngập</h4>
+                    <p>Bạn muốn săn giá sốc, Tiki có<a class="item_text" href="#">giá sốc mỗi ngày</a> cho bạn! Bạn là tín đồ của các thương hiệu, các <a class="item_text" href="#">cửa hàng Official chính hãng</a> đang chờ đón bạn. Không cần săn mã freeship, vì Tiki đã có hàng triệu sản phẩm trong <a class="item_text" href="#">chương trình Freeship+</a>, không giới hạn lượt đặt, tiết kiệm thời gian vàng bạc của bạn. Mua thêm gói <a class="item_text" href="#">TikiNOW tiết kiệm</a> để nhận 100% free ship 2h & trong ngày, hoặc mua gói TikiNOW cao cấp để nhận được 100% freeship, áp dụng cho 100% sản phẩm, 100% tỉnh thành Việt Nam. Bạn muốn tiết kiệm hơn nữa? Đã có TikiCARD, <a class="item_text" href="#">thẻ tín dụng Tiki hoàn tiền 15%</a> trên mọi giao dịch (tối đa hoàn 600k/tháng)</p>
+                </div>
+            </div>
+            <hr style="width: 99%; opacity: 0.4;">
+        </div>
+
+    </div>
+
+    <script src="./js.js"></script>
+    
+</body>
+</html>
